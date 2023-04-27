@@ -1,10 +1,10 @@
 # 特别提醒
 
-之前水文章（ https://51.ruyo.net/18261.html ）的时候同步这个仓库。微信早就被封了。
+本仓库来源[https://github.com/869413421/wechatbot]ttps://github.com/869413421/wechatbot
+
+仅仅将接口改为chat接口
 
 本仓库的内容谨慎尝试！！！！！！！！！！
-
-
 
 # wechatbot
 > 最近chatGPT异常火爆，本项目可以将个人微信化身GPT机器人，
@@ -30,7 +30,7 @@
 > * 请注意收发敏感信息，本项目不做信息过滤。
 
 # 快速开始
-> 非技术人员请直接下载release中的[压缩包](https://github.com/869413421/wechatbot/releases/tag/v1.1.1) ，解压运行。
+
 ````
 # 获取项目
 git clone https://github.com/869413421/wechatbot.git
@@ -50,20 +50,15 @@ go run main.go
 {
 "api_key": "your api key",
 "auto_pass": true,
-"session_timeout": 60
+"session_timeout": 60,
+open_friend_mode: false
 }
 
 api_key：openai api_key
 auto_pass:是否自动通过好友添加
 session_timeout：会话超时时间，默认60秒，单位秒，在会话时间内所有发送给机器人的信息会作为上下文。
+open_friend_mode： 是否开启自动添加好友
 ````
 
-# 使用示例
-### 向机器人发送`我要问下一个问题`，清空会话信息。
-### 私聊
-<img width="300px" src=""/>
-
-### 群聊@回复
-<img width="300px" src=""/>
-
+待处理问题：并发上下文会引用到其他提问者的上下文。
 
